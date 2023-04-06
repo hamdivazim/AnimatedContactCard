@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <style>
+            body { font-family: Arial, Helvetica, sans-serif; }
+            .card {
+                border-radius: 25px;
+                border: 2px solid #959595;
+                padding: 20px;
+                width: 300px;
+                text-align: center;
+                margin: 20px;
+            }
+
+            .avatar {
+                vertical-align: middle;
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+            }
+
+            .fade {
+                animation: fade 2s infinite;
+                border-radius: 25px;
+                padding: 20px;
+                font-size: 0px;
+                margin: 10px;
+            }
+
+            @keyframes fade {
+                0% { background-color: #c2c2c2; }
+                50% { background-color: #959595; }
+                100% { background-color: #c2c2c2; }
+            }
+
+            .complete { font-size: 1em; }
+
+            #about { height: 100px; }
+
+            #username.fade { width: 75px; }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="card">
+            <img src="empty-avatar.png" class="avatar" id="avatar">
+            <p class="fade" id="about">An awesome coder who does awesome stuff An awesome coder who does awesome stuff An awesome coder who does awesome stuff</p>
+            <center><p class=fade id="username"> <b>codingboy_CW</b> </p></center>
+            <p class="fade" id="contact"> <b>Contact Me:</b> codingboy.cw@gmail.com </p>
+        </div>
+
+        <script>
+            // This is where you would get data from a database.
+
+            setTimeout(function() {
+                document.getElementById("avatar").src = "avatar.png";
+                document.getElementById("about").className = "complete";
+                document.getElementById("username").className = "complete";
+                document.getElementById("contact").className = "complete";
+            }, 2000);
+        </script>
+    </body>
+
+</html>
